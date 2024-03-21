@@ -4,91 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHEMISTRY Cycle</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-        }
-        nav {
-            background-color: #000000;
-            overflow: hidden;
-            padding: 10px;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        nav a:hover {
-            background-color: #000000;
-        }
-        .search-container {
-            float: right;
-            margin-right: 20px;
-        }
-        .search-container input[type=text] {
-            padding: 10px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-        }
-        .search-container button {
-            padding: 10px 15px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #0b96ed;
-            color: white;
-            transition: background-color 0.3s;
-        }
-        .search-container button:hover {
-            background-color: #45a049;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .subject {
-            width: 200px;
-            height: 200px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            margin: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .subject:hover {
-            background-color: #0000e9;
-        }
-        h1 {
-            text-align: center;
-            color: #ffffff;
-            margin-top: 30px;
-        }
-         /* Media query for mobile screens */
-         @media screen and (max-width: 600px) {
-            nav img {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <nav>
@@ -114,52 +31,7 @@
         <div class="subject" onclick="openGoogleDrive('CHEMISTRY')">CHEMISTRY</div>
     </div>
 
-    <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var searchInput = document.getElementById('searchInput').value.toUpperCase();
-            var subjects = ['ADLD', 'BEE', 'BIO EVS', 'CPP', 'IT SKILL', 'EV', 'MATHS', 'CHEMISTRY'];
-            for (var i = 0; i < subjects.length; i++) {
-                if (subjects[i].toUpperCase() === searchInput) {
-                    openGoogleDrive(subjects[i]);
-                    return;
-                }
-            }
-            alert('Subject not found!');
-        });
-
-        function openGoogleDrive(subject) {
-            // Redirect to Google Drive link based on the subject
-            switch (subject) {
-                case 'ADLD':
-                    window.location.href = 'https://drive.google.com/drive/folders/16T2_I_JIEisswgPj4Xk6S_OY_DTtCklG';
-                    break;
-                case 'BEE':
-                    window.location.href = 'https://drive.google.com/drive/folders/19sv3ZFsqBuNxB3Ltuyu6YwYJLh_86q__';
-                    break;
-                case 'BIO EVS':
-                    window.location.href = 'https://drive.google.com/drive/folders/13K6Hwh_bkWi1hBb9iYAJf6nQcS6In0AQ';
-                    break;
-                case 'CPP':
-                    window.location.href = 'https://drive.google.com/drive/folders/134H9d31TReG8O_qgglnE9qqgctLtEv-z';
-                    break;
-                case 'IT SKILL':
-                    window.location.href = 'https://drive.google.com/drive/folders/11qYDOnYNVIRyVNSYOFan64n-RHn8ozIa';
-                    break;
-                case 'EV':
-                    window.location.href = 'https://drive.google.com/drive/folders/1EBRbMBS6r42GQ60k8O4AdkiC_0muZ1TF';
-                    break;
-                case 'MATHS':
-                    window.location.href = 'https://drive.google.com/drive/folders/1DL06euTxLjK1GWH2AFPaB1Yfd5mxf_8j';
-                    break;
-                case 'CHEMISTRY':
-                    window.location.href = 'https://drive.google.com/drive/folders/11s9sgR-Hpb40p2tVlsetlBWcE6UPIubO';
-                    break;
-                default:
-                    break;
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
